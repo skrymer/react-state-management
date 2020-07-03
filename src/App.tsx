@@ -3,6 +3,7 @@ import './App.css';
 import UseState from './components/UseState';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import UseReducer from './components/UseReducer';
+import Redux from './components/Redux';
 
 export const fullScreenStyle: CSSProperties = {
   position: 'fixed',
@@ -15,7 +16,6 @@ export const fullScreenStyle: CSSProperties = {
 
 export const generateRandomColor = () => '#' + Math.floor(Math.random() * 16777215).toString(16)
 
-
 function App() {
 
   return (
@@ -24,6 +24,7 @@ function App() {
         <Switch>
           <Route path="/use-state" component={UseState} exact />
           <Route path="/use-reducer" component={UseReducer} exact />
+          <Route path="/redux" component={Redux} exact />
         </Switch>
       </BrowserRouter>
       <ul>

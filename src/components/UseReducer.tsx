@@ -35,9 +35,22 @@ const UseReducer: React.FC<Props> = (props) => {
                 onClick={() => dispatch({ type: ActionType.SetBackgroundColor, payload: generateRandomColor() })} >
                 change background color
             </button>
+            <SubComponent dispatch={dispatch} />
         </div>
     );
 
 };
+
+// easily pass down dispatch to change state, instead of a callback
+const SubComponent = (props: {dispatch: React.Dispatch<Action>}) => (
+    <div>
+            Sub component
+            <button
+                style={{ margin: '50px' }}
+                onClick={() => props.dispatch({ type: ActionType.SetBackgroundColor, payload: generateRandomColor() })} >
+                change background color
+            </button>
+    </div>
+)
 
 export default UseReducer;
