@@ -4,6 +4,7 @@ import UseState from './components/UseState';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import UseReducer from './components/UseReducer';
 import Redux from './components/Redux';
+import Recoil from './components/Recoil';
 
 export const fullScreenStyle: CSSProperties = {
   position: 'fixed',
@@ -25,6 +26,7 @@ function App() {
           <Route path="/use-state" component={UseState} exact />
           <Route path="/use-reducer" component={UseReducer} exact />
           <Route path="/redux" component={Redux} exact />
+          <Route path="/recoil" component={Recoil} exact />
         </Switch>
       </BrowserRouter>
       <ul>
